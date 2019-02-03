@@ -305,12 +305,13 @@ void maze::printShortestPath2(graph &g) {
 
 
 
-int main()
+int main(int argc, char* argv[])
 {
 	ifstream fin;
 
-	// Read the maze from the file.
-	string fileName = "maze1.txt";
+	// Read the maze from the input file.
+	string fileName = argv[1];
+	cout << argv[1] << endl;
 
 	fin.open(fileName.c_str());
 	if (!fin)
